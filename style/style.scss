@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+@mixin border-radius($value) {
+    border-radius: $value;
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    -ms-border-radius: $value;
+    -o-border-radius: $value;
+}
+
+@mixin transition($value) {
+    transition: all $value;
+    -webkit-transition: all $value;
+    -moz-transition: all $value;
+    -ms-transition: all $value;
+    -o-transition: all $value;
+}
+
+$head: 'Abril Fatface',
+cursive;
+$peragraph: 'Roboto Condensed',
+sans-serif;
+
+
+$text_color:#727272;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    @include transition(0.50s);
+}
+
+     
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+
+}
+
+button {
+    a {
+        text-decoration: none;
+    }
+}
+
+ul {
+    padding: 0;
+
+    li {
+        list-style: none;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    color: $text_color;
+    line-height: 30px;
+    font-weight: 500;
+
+}
+
+.sab_title {
+    max-width: 750px;
+
+    * {
+        margin-top: 20px;
+    }
+
+    .sed_con {
+        font-size: 2.8rem;
+        font-weight: 700;
+    }
+
+    .prem_btn {
+        padding: 20px 40px;
+        background-color: #FF900E;
+        border: none;
+        @include border-radius(10px);
+
+        a {
+            color: #ffffff;
+            font-size: 1.25rem;
+        }
+    }
+}
+
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0px 60px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+//=================================================================
+//                          header_section
+//=================================================================
+
+.header_section {
+    margin-top: 60px;
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .mune {
+            ul {
+                display: flex;
+
+                a {
+                    margin-left: 20px;
+                    color: #424242;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .logo_title {
+            h1 {
+                color: #131313;
+                font-size: 50px;
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+//=================================================================
+//                          Brand_section
+//=================================================================
+
+.Brand_section {
+    margin-top: 100px;
+
+    .sab_title {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 750px;
+
+        .sed_con {
+            font-size: 4rem;
+            font-weight: 900;
+        }
+    }
+
+    .Ban_img {
+        margin-top: 60px;
+    }
+}
+
+//=================================================================
+//                          Quick_section
+//=================================================================
+
+
+.Quick_section {
+    margin-top: 100px;
+
+    .Qui_sec_items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .Qui_img {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+//=================================================================
+//                          Features_section
+//=================================================================
+
+.Features_section {
+    margin-top: 100px;
+
+    .Features_desc {
+        .fe_img {
+            position: relative;
+
+            .img_ht {
+                height: 100%;
+            }
+
+            .years {
+                @include border-radius(10px);
+                box-sizing: border-box;
+                text-align: center;
+
+                h1 {
+                    color: #ffffff;
+                    font-size: 50px;
+                    font-weight: 900;
+                }
+
+                h4 {
+                    margin-top: 20px;
+                    color: #ffffff;
+                    font-size: 1.25rem;
+                }
+
+                margin-top: -100px;
+                width: 50%;
+                padding: 40px;
+                background-color: #FF900E;
+                position: absolute;
+            }
+        }
+
+        display: grid;
+        grid-template-columns:1fr 2fr;
+        column-gap: 50px;
+
+        .sed_con {
+            max-width: 400px;
+            padding: 10px;
+            font-weight: 900;
+            margin: 30px 0px;
+            border-left: 5px solid #FF900E;
+        }
+
+        .fe_cads {
+            margin-left: 20px;
+
+            .cad {
+                margin-top: 60px;
+
+                h4 {
+                    font-weight: 800;
+                }
+
+                * {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+//=================================================================
+//                          Facts_section
+//=================================================================
+
+.Facts_section {
+    margin-top: 200px;
+
+    .sed_con {
+        font-weight: 900;
+    }
+
+    .fact_cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+        margin-top: 30px;
+
+        .fact_card {
+            border: 1px solid #FF900E;
+            padding: 40px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+
+            h1 {
+                font-weight: 900;
+                font-size: 50px;
+                color: #424242;
+            }
+
+            h3 {
+                color: #424242;
+                font-weight: 700;
+                margin-top: 20px;
+            }
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+
+//=================================================================
+//                          Sponsors_section
+//=================================================================
+
+.Sponsors_section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    .sab_title {
+        margin: 0 auto;
+        text-align: center;
+
+        .sed_con {
+            font-weight: 900;
+        }
+    }
+
+    .img_card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .card {
+            margin-top: 50px;
+        }
+    }
+}
